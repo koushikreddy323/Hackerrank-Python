@@ -10,3 +10,4 @@ def boom(s):
     else:
       v=x
   print(i)
+boom('AAABBB')
