@@ -1,0 +1,8 @@
+HERE K IS INTERVAL AND ARR IS ARRAY OF ELEMENTS. IN THE GIVEN ARRAY WE HAVE TO FIND THE DIFFERENCE BTW THE ELEMENTS
+def pairs(k, arr):
+    arr = set(arr)
+    count = 0
+    for num in arr:
+        if(num+k in arr):
+            count += 1
+    return count
