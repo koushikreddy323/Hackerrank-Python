@@ -1,0 +1,21 @@
+https://www.hackerrank.com/challenges/count-triplets-1/problem?h_l=interview&playlist_slugs%5B%5D=virtusa
+
+COUNTING TRIPLETS
+5 5
+1 5 5 25 125      HERE FIRST 5 IS NO OF ELEMENTS IN ARRAY ANS THE SECOND IS RATIO DIFFERENCE
+
+from collections import Counter
+def countTriplets(arr, r):
+    count=0
+    r2=Counter()
+    r3=Counter()
+    for v in arr:
+        if v in r3:
+            count += r3[v]
+
+        if v in r2:
+            r3[v*r] += r2[v]
+
+        r2[v*r] += 1
+
+    return count
